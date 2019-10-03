@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-rows: reprat(3, 1fr);
+    grid-gap: 40px;
+}
+.first {
+    display: block;
+    grid-row: 1;
+}
+.second {
+    display: block;
+    grid-row: 2;
+}
+.third {
+    display: block;
+    grid-row: 3;
+}
+button {
+    display: block;
+    border: 0.2em solid white;
+    color: white;
+    background-color: black;
+    padding: 1.5em 1em;
+    margin-left: calc(50% - 80px);
+    &:hover {
+        background-color: white;
+        color:black;
+        cursor: pointer;
+    }
+}
+.second button {
+    &:hover {
+        animation: scale 1s linear forwards;
+    }
+}
+@keyframes scale{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+.third button {
+    &:hover {
+        animation: move 1s linear forwards;
+    }
+}
+@keyframes move{
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100px, 0);
+    }
+}

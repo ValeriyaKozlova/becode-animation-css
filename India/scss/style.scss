@@ -1,0 +1,115 @@
+$color-button: #F42627;
+$color-h1: #2C2137;
+$color-h2: #D67D89;
+$color-p: #858585;
+$color-body: #F1F1F1;
+$color-back: white;
+
+
+:root {
+    font-size: calc(1hw + 0.6em);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: $color-body;
+}
+.container {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    box-shadow: 0px 3px 3px 3px #666666;
+    &:hover {
+         box-shadow: 0px 10px 10px 10px #666666;
+         .photo {
+            background-color: #858585;
+            opacity: 0.6;
+            transform: scale(1.2);
+        }
+        .hidden {
+            opacity: 1;
+            height: 150px;
+        }
+    }
+}
+.photo {
+    background-image: url(../images/photo.jpeg);
+    transition: all .6s;
+    width: 100%;
+    height: 100%;
+}
+button {
+    border-radius: 50%;
+    color: $color-back;
+    font-size: 1em;
+    background: $color-button;
+    padding: 1em;
+    width: 70px;
+    height: 70px;
+    border: none;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+    cursor: pointer;
+}
+.info {
+    position: absolute;
+    bottom: 0;
+    .data {
+        color: $color-back;
+        text-decoration: none;
+        background-color: $color-button;
+        padding: 15px;
+        font-weight: bold;
+        position: absolute;
+        top: -40px;
+        left: 0%;
+        z-index: 2;
+     }
+}
+.wrapper {
+    text-align: left;
+    background: $color-back;
+    padding: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+     h1 {
+         color: $color-h1;
+         font-size: 3em;
+         margin-bottom: 0;
+         margin-top: 0;
+     }
+     h2 {
+         margin-top: 0;
+         margin-bottom: 0;
+         color: $color-h2;
+         font-size: 2em;
+     }
+    .hidden {
+    height: 0;
+    transition: all .6s;
+    opacity: 0;
+    background-color: $color-back;
+    color: $color-p;
+    text-align: justify;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    overflow: hidden;
+    }
+    .div {
+        padding-top: 15px;
+        a {
+         color: $color-p;
+         text-decoration: none;
+         margin: 0.5em;
+        }
+        i {
+          margin-right: 0.5em;
+         }
+    }
+}
+

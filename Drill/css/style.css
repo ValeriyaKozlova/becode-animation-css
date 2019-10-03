@@ -1,0 +1,102 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: reprat(3, 1fr);
+      grid-template-rows: reprat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.first {
+  display: block;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.second {
+  display: block;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.third {
+  display: block;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+button {
+  display: block;
+  border: 0.2em solid white;
+  color: white;
+  background-color: black;
+  padding: 1.5em 1em;
+  margin-left: calc(50% - 80px);
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.second button:hover {
+  -webkit-animation: scale 1s linear forwards;
+          animation: scale 1s linear forwards;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+.third button:hover {
+  -webkit-animation: move 1s linear forwards;
+          animation: move 1s linear forwards;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
